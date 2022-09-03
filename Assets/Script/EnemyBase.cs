@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 [CreateAssetMenu]
 public class EnemyBase : ScriptableObject
@@ -16,6 +17,8 @@ public class EnemyBase : ScriptableObject
     public int SPDefanse => _spDefense;
 
     public int Speed => _speed;
+
+    public List <LearnableMove> LearnableMoves => _learnableMoves;
 
     //名前、説明、タイプ、ステータス、画像
 
@@ -55,11 +58,30 @@ public class EnemyBase : ScriptableObject
 
     [SerializeField]
     int _speed;
+
+    //覚える技一覧
+    [SerializeField]
+    List<LearnableMove> _learnableMoves;
+}
+
+//覚える技:レベルに応じて覚えて行く
+[Serializable]
+public class LearnableMove
+{
+    public MoveBase Base => _base;
+    public int Level => _level;
+
+    [SerializeField]
+    MoveBase _base;
+
+    [SerializeField]
+    int _level;
 }
 
 public enum EnemyType
 {
     None,
+    Normal,
     Fire,
     Water,
     Electric,

@@ -12,7 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2078df1f8b45fdf428c1cbac851389cf, type: 3}
   m_Name: Raphael_Eiji
   m_EditorClassIdentifier: 
-  _name: 
-  _description: 
-  _frontSprite: {fileID: 0}
-  _backSprite: {fileID: 0}
+  _name: "\u30E9\u30D5\u30A1\u30A8\u30EB\u3048\u3044\u3058"
+  _description: "\u308F\u308C\u3089\u306E\u89AA\u53CB"
+  _frontSprite: {fileID: 21300000, guid: 843823c80be1fe244945120519a22e53, type: 3}
+  _backSprite: {fileID: 21300000, guid: 4ad46572811440e479a498ba4754f89d, type: 3}
+  _type1: 13
+  _type2: 0
+  _maxHP: 36
+  _attack: 40
+  _defense: 4
+  _spAttack: 97
+  _spDefense: 8
+  _speed: 48
